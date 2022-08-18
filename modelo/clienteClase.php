@@ -14,13 +14,25 @@ class Cliente
         $this->estado=$es;
     }
 
-    function eliminarCliente(){
+    public function grabarCliente(){
+        include('conexion.php');
+        $db = new Conexion();
+        $sql = $db->query("insert into cliente(nit_ci, razonsocial, estado) values('$this->nit','$this->razon','$this->estado')");
+        return($sql); 
+    }
+
+    public function listarCliente(){
 
     }
-    function listarCliente(){
+
+    public function listarClienteId(){
 
     }
-    function editarCliente($cod, $rs,$nit){
+
+    public function eliminarCliente(){
+
+    }
+    public function editarCliente($cod, $rs,$nit){
 
     }
 
