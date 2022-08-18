@@ -14,6 +14,16 @@ class Cliente
         $this->estado=$es;
     }
 
+    function eliminarCliente(){
+
+    }
+    function listarCliente(){
+
+    }
+    function editarCliente($cod, $rs,$nit){
+
+    }
+
 }
 
 ?>
