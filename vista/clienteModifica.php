@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modificar</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <?php
             while ($reg = mysqli_fetch_array($res)) {
             ?>
-                <form action="" method="get">
+                <form action="clienteModifica.php" method="get">
                     <div class="form-group">
                         <input type="text" name="cod" hidden value="<?= $reg[0] ?>">
                     </div>
@@ -28,7 +29,7 @@
                         <label for="">NIT CI</label>
                         <input type="text" class="form-control" name="nit" id="nit" placeholder="" value="<?= $reg['nit_ci'] ?>">
                     </div>
-                    <input type="submit" name="Modificar" id="Modificar" class="btn btn-primary" value="Modificar"></input>
+                    <input type="submit" name="modificar" id="modificar" class="btn btn-primary" value="Modificar"></input>
                 </form>
             <?php
             }

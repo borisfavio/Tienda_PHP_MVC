@@ -2,8 +2,8 @@
 include("../vista/clienteRegistro.php");
 if (isset($_POST['registrarCliente'])) {
     $ni = $_POST['nit'];
-    $rs = $_POST['razon'];
-    $es = "activo";
+    $rs = $_POST['razonsocial'];
+    $es = 1;
     include('../modelo/clienteClase.php');
     $cli = new Cliente("", $ni, $rs, $es);
     $r = $cli->grabarCliente();
