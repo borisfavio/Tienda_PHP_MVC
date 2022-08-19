@@ -28,7 +28,7 @@
                 <h4 class="text-light font-weight-bold mb-0">Diseño WEB II</h4>
             </div>
             <div class="menu">
-                <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
+                <a href="../index.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
                     Tablero</a>
 
                 <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
