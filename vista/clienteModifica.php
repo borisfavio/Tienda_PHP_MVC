@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <?php
+    include('header.php');
+    ?>
     <div class="container">
         <div class="col-md-1"></div>
         <div class="col-md-8">
@@ -29,7 +32,7 @@
                         <label for="">NIT CI</label>
                         <input type="text" class="form-control" name="nit" id="nit" placeholder="" value="<?= $reg['nit_ci'] ?>">
                     </div>
-                    <input type="submit" name="modificar" id="modificar" class="btn btn-primary" value="Modificar"></input>
+                    <input type="submit" name="modificar" id="modificar" class="btn btn-primary" value="modificar"></input>
                 </form>
             <?php
             }
