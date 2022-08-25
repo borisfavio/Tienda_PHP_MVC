@@ -2,7 +2,8 @@
     include('header.php');
     ?>
     <div class="container">
-        <table class="table">
+        <div class="card">
+        <table class="table table-reponsive lista">
             <thead>
                 <tr>
                     <th>ID CLIENTE</th>
@@ -28,6 +29,8 @@
 
             </tbody>
         </table>
+        </div>
+
         <td><a href="../controlador/clienteRegistro.php" class="btn btn-primary">Nuevo Cliente</a></td>
 
     </div>

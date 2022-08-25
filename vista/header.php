@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" crossorigin="anonymous">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--<link rel="stylesheet" href="../assets/css/style.css">-->
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
@@ -68,7 +68,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="../assets/img/user-1.png" class="img-fluid rounded-circle avatar mr-2"
+                                    <img src="" class="img-fluid rounded-circle avatar mr-2"
                                         alt="https://generated.photos/" />
                                     Boris Favio
                                 </a>

@@ -10,6 +10,9 @@ body {
     font-weight: 300;
     color: var(--primary);
 }
+.lista{
+    height: 150px;
+}
 
 a:hover {
     text-decoration: none;
