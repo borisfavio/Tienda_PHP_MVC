@@ -14,6 +14,13 @@ class Cliente
         $this->estado=$es;
     }
 
+    public function verificar($user, $psw){
+        include('conexion.php');
+        $db = new Conexion();
+        $sql = $db->query("SELECT * FROM usuarios WHERE usuario LIKE '$user' AND password = '$psw';");
+        return($sql);
+    }
+
     public function grabarCliente(){
         include('conexion.php');
         $db = new Conexion();
