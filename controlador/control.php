@@ -18,11 +18,6 @@ echo $user;
 echo $psw;
 
 
-
-
-$res = mysqli_query($conn, $query) or die(mysqli_error($conn));
-
-
     if(mysqli_num_rows($res)!=0){
         session_start();
         
@@ -48,10 +43,11 @@ $res = mysqli_query($conn, $query) or die(mysqli_error($conn));
             $_SESSION['ingreso']="si";
         }
         
-        header("Location: ../vista/index1.html");
+        header("Location: ../vista/principal.php");
     }else{
         echo "no da";
-        header("Location: index.php?error=1");
+        header("Location: ../vista/principal.php");
+        //header("Location: index.php?error=1");
     }
 
 

@@ -31,11 +31,13 @@
                 <a href="../index.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
                     Tablero</a>
 
-                <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
+                <a href="../controlador/usuarioLista.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
                     Usuarios</a>
 
                 <a href="../controlador/clienteLista.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
                     Clientes</a>
+                <a href="../controlador/clienteLista.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
+                    Empleados</a>
 
                 <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-stats lead mr-2"></i>
                     Estadísticas</a>
@@ -68,7 +70,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="" class="img-fluid rounded-circle avatar mr-2"
+                                    <img width="32px" src="../assets/img/user-2.svg" class="img-fluid rounded-circle avatar mr-2"
                                         alt="https://generated.photos/" />
                                     Boris Favio
                                 </a>
