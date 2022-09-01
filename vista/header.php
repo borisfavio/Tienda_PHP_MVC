@@ -1,88 +1,67 @@
-       <!DOCTYPE html>
-       <html lang="en">
-       <head>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="../css/materialize.css" crossorigin="anonymous">
 
-    <!-- Styles -->
-    <!--<link rel="stylesheet" href="../assets/css/style.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
+    <title>Sistema Ventas</title>
 
-    <!-- Ionic icons -->
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
-    <title>Dashboard - Templune</title>
 </head>
-       <body>
-        
-       <div class="d-flex" id="content-wrapper">
-       <!-- Sidebar -->
-        <div id="sidebar-container" class="bg-primary">
-            <div class="logo">
-                <h4 class="text-light font-weight-bold mb-0">Diseño WEB II</h4>
-            </div>
-            <div class="menu">
-                <a href="../index.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
-                    Tablero</a>
 
-                <a href="../controlador/usuarioLista.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
-                    Usuarios</a>
+<body>
 
-                <a href="../controlador/clienteLista.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
-                    Clientes</a>
-                <a href="../controlador/clienteLista.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
-                    Empleados</a>
+    <nav class="nav-extended teal darken-2">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Sistema de Ventas</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="#" class="d-block text-light p-3 border-0 center">
+                        <i class="material-icons top">apps</i>Tablero
+                    </a>
+                </li>
+                <li>
+                    <a href="../controlador/clienteLista.php" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">people</i></i>Clientes
+                    </a>
+                </li>
+                <li>
+                    <a href="../controlador/usuarioLista.php" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">person</i>Usuarios</a>
+                </li>
+                <li>
+                    <a href="../controlador/empleadoLista.php" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">badge</i>Empleados
+                    </a>
+                </li>
+                <li>
+                    <a href="../controlador/cargoLista.php" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">business</i>Cargos
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">query_stats</i>Estadísticas
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">account_circle</i>Perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block text-light p-3 border-0">
+                        <i class="material-icons top">settings</i>Configuración
+                    </a>
+                </li>
 
-                <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-stats lead mr-2"></i>
-                    Estadísticas</a>
-                <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-person lead mr-2"></i>
-                    Perfil</a>
-                <a href="#" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
-                    Configuración</a>
-            </div>
+            </ul>
         </div>
-        <!-- Fin sidebar -->
-
-        <div class="w-100">
-         <!-- Navbar -->
-         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container">
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <form class="form-inline position-relative d-inline-block my-2">
-                            <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button class="btn position-absolute btn-search" type="submit"><i
-                                    class="icon ion-md-search"></i></button>
-                        </form>
-                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img width="32px" src="../assets/img/user-2.svg" class="img-fluid rounded-circle avatar mr-2"
-                                        alt="https://generated.photos/" />
-                                    Boris Favio
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Mi perfil</a>
-                                    <a class="dropdown-item" href="#">Suscripciones</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Cerrar sesión</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Fin Navbar -->
