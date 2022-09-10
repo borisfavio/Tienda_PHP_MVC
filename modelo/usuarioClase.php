@@ -29,7 +29,7 @@ class Usuario
     public function listar(){
         include('conexion.php');
         $db = new Conexion();
-        $sql = $db->query("SELECT * FROM usuarios;");
+        $sql = $db->query("SELECT u.id, e.nombre, u.usuario, u.nivel, u.estado FROM usuarios u INNER JOIN empleado e ON u.id = e.cargo_id_cargo;");
         return($sql);
     }
 

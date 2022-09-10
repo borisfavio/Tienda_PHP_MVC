@@ -45,7 +45,14 @@ class Empleado
     public function listarEmpleados(){
         include('conexion.php');
         $db = new Conexion();
-        $sql = $db->query("select * from empleado where estado = 1 ");
+        $sql = $db->query("select e.id, e.ci, e.nombre, e.paterno, e.materno, e.direccion,
+        e.telefono, e.fechanacimiento,
+        e.genero, e.intereses,
+        e.estado,
+        c.cargo from empleado e
+        INNER JOIN cargo c
+        ON c.id = e.cargo_id_cargo 
+        where e.estado = 1");
         return($sql);
     }
 
