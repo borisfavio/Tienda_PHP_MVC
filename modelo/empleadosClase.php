@@ -56,6 +56,20 @@ class Empleado
         return($sql);
     }
 
+    public function buscarEmpleados($nombre){
+        include('conexion.php');
+        $db = new Conexion();
+        $sql = $db->query("select e.id, e.ci, e.nombre, e.paterno, e.materno, e.direccion,
+        e.telefono, e.fechanacimiento,
+        e.genero, e.intereses,
+        e.estado,
+        c.cargo from empleado e
+        INNER JOIN cargo c
+        ON c.id = e.cargo_id_cargo 
+        where e.estado = 1 and e.nombre like $nombre");
+        return($sql);
+    }
+
     public function listarClienteId(){
         include('conexion.php');
         $db = new Conexion();
@@ -78,26 +92,54 @@ class Empleado
         return($sql);
     }
 
-    public function setId($ide){
-        $this->id=$ide;
+    public function setId($id){
+        $this->id=$id;
     }
     public function getId(){
         return $this->id;
     }
 
-    public function setNit($ni){
-        $this->nit=$ni;
+    public function setCi($ci){
+        $this->ci=$ci;
     }
-    public function getNit(){
-        return $this->nit;
+    public function getCi(){
+        return $this->ci;
+    }
+    
+    public function setNombre($n){
+        $this->nombre=$n;
+    }
+    public function getNombre(){
+        return $this->nombre;
+    }
+    
+    public function setPaterno($pa){
+        $this->paterno=$pa;
+    }
+    public function getPaterno(){
+        return $this->paterno;
+    }
+
+    public function setMaterno($ma){
+        $this->paterno=$ma;
+    }
+    public function getMaterno(){
+        return $this->materno;
+    }
+
+    public function setDireccion($di){
+        $this->direccion=$di;
+    }
+    public function getDireccion(){
+        return $this->direccion;
     }
 
 
-    public function setRazon($ra){
-        $this->razon=$ra;
+    public function setFNacimiento($fn){
+        $this->f_nacimiento=$fn;
     }
-    public function getRazon(){
-        return $this->razon;
+    public function getFNacimiento(){
+        return $this->f_nacimiento;
     }
 
 

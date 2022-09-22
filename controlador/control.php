@@ -1,14 +1,14 @@
 <?php
 
 if (isset($_POST['ingresar'])) {
-    # code...
-} else {
-    include('../vista/login.php');
-}
+    echo "good";
+
 
 $user = $_POST['usuario'];
 $psw = $_POST['password'];
 $psw = md5($psw);
+
+var_dump($user);
 
 include('../modelo/usuarioClase.php');
 $cli = new Usuario("",$user,$psw, "", "", "");
@@ -53,7 +53,9 @@ echo $psw;
 
     //header("Location: main.php");
 
-
+} else {
+    include('../vista/login.php');
+}
 
 
  ?>

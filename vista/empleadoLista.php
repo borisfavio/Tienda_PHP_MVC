@@ -63,6 +63,7 @@
         </div>
 
         <td><a href="../controlador/clienteRegistro.php" class="btn btn-primary">Nuevo Cliente</a></td>
+        <td><a target="_blank" href="../controlador/reporteClientes.php" class="btn btn-primary">Reporte</a></td>
 
       </div>
     </div>
