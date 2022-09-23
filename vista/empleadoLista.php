@@ -1,6 +1,12 @@
     <?php
     include('header.php');
     ?>
+    <style media="screen">
+      .cuerpo{
+        height: 70hw;
+        overflow-y: scroll;
+      }
+    </style>
     <!--tabs de navegacion-->
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
@@ -11,29 +17,46 @@
       </ul>
     </div>
     </nav>
-
+<div class="cuerpo">
     <div id="test1" class="col s12">
       <div class="container">
       <?php
               while ($reg = mysqli_fetch_array($res)) {
               ?>
         <div class="card small horizontal">
-          <div class="card-image">
-            <img src="../img/personal.png">
+          <div class="valign-wrapper">
+            <img class="circle" src="../img/personal.png">
           </div>
           <div class="card-stacked">
             <div class="card-content">
-              <h5><?= $reg['cargo'] ?></h5>
-              <h6>Nombre: <?= $reg['nombre'] ?> <?= $reg['paterno'] ?> <?= $reg['materno'] ?></h6>
-              <h6>CI: <?= $reg['ci'] ?> </h6>
+              <div class="row">
+                <h5 class="green-text"><?= $reg['cargo'] ?></h5>
+                <div class="col s12 m6">
+                  <h6>Nombre: <?= $reg['nombre'] ?> <?= $reg['paterno'] ?> <?= $reg['materno'] ?></h6>
+                </div>
+                <div class="col s12 m6">
+                  <h6>CI: <?= $reg['ci'] ?> </h6>
+                </div>
+                <div class="col s12 m6">
               <h6>Nacimiento: <?= $reg['fechanacimiento'] ?></h6>
+            </div>
+            <div class="col s12 m6">
               <h6>Direccion: <?= $reg['direccion'] ?></h6>
+            </div>
+            <div class="col s12 m6">
               <h6>Telefono: <?= $reg['telefono'] ?></h6>
+            </div>
+            <div class="col s12 m6">
               <h6>Genero: <?= $reg['genero'] ?></h6>
+            </div>
+            <div class="col s12 m6">
               <h6>Intereses: <?= $reg['intereses'] ?></h6>
             </div>
+            </div>
+            </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
             </div>
           </div>
         </div>
@@ -42,7 +65,7 @@
               ?>
 
 
-        <td><a href="../controlador/clienteRegistro.php" class="btn btn-primary">Nuevo Cliente</a></td>
+
         <td><a target="_blank" href="../controlador/reporteClientes.php" class="btn btn-primary">Reporte</a></td>
 
       </div>
@@ -78,9 +101,9 @@
                         <option>Masculino</option>
                         <option>Femenino</option>
                       </select>
-                      
+
                     </div>
-            
+
                   </div>
                   <div class="col s6">
                     <div class="input-field col s12 l6">
@@ -114,10 +137,10 @@
     </div>
 
 
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
+    <div style="display = none;" id="test3" class="col s12">Test 3</div>
+    <div style="display = none;" id="test4" class="col s12">Test 4</div>
 
-
+</div>
 
     <!-- Fin Navbar -->
     <script src="../js/jquery.js"></script>
