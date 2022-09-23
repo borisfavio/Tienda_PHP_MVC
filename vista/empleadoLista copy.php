@@ -13,34 +13,54 @@
     </nav>
 
     <div id="test1" class="col s12">
-      <div class="container">
-      <?php
+      <div class="container-fluid">
+        <div class="card">
+          <table style="overflow-x: scroll; width: 95%;" class="striped responsive-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>CI</th>
+                <th>NOMBRE</th>
+                <TH>PATERNO</TH>
+                <th>MATERNO</th>
+                <th>DIRECCION</th>
+                <th>TELEFONO</th>
+                <th>F/Nac.</th>
+                <th>GENERO</th>
+                <th>INTERESES</th>
+                <th>ESTADO</th>
+                <th>CARGO</th>
+                <th colspan="2">OPERACIONES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
               while ($reg = mysqli_fetch_array($res)) {
               ?>
-        <div class="card small horizontal">
-          <div class="card-image">
-            <img src="../img/personal.png">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5><?= $reg['cargo'] ?></h5>
-              <h6>Nombre: <?= $reg['nombre'] ?> <?= $reg['paterno'] ?> <?= $reg['materno'] ?></h6>
-              <h6>CI: <?= $reg['ci'] ?> </h6>
-              <h6>Nacimiento: <?= $reg['fechanacimiento'] ?></h6>
-              <h6>Direccion: <?= $reg['direccion'] ?></h6>
-              <h6>Telefono: <?= $reg['telefono'] ?></h6>
-              <h6>Genero: <?= $reg['genero'] ?></h6>
-              <h6>Intereses: <?= $reg['intereses'] ?></h6>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-        <?php
+                <tr>
+                  <td scope="row"><?= $reg['id'] ?></td>
+                  <td><?= $reg['ci'] ?></td>
+                  <td><?= $reg['nombre'] ?></td>
+                  <td><?= $reg['paterno'] ?></td>
+                  <td><?= $reg['materno'] ?></td>
+                  <td><?= $reg['direccion'] ?></td>
+                  <td><?= $reg['telefono'] ?></td>
+                  <td><?= $reg['fechanacimiento'] ?></td>
+                  <td><?= $reg['genero'] ?></td>
+                  <td><?= $reg['intereses'] ?></td>
+                  <td><?= $reg['estado'] ?></td>
+                  <td><?= $reg['cargo'] ?></td>
+                  <td><a href="../controlador/clienteelimina.php?cod=<?= $reg['id'] ?>" class="btn btn bg-danger">Eliminar</a></td>
+                  <td><a href="../controlador/clienteModifica.php?cod=<?= $reg['id'] ?>" class="btn btn bg-info">Modificar</a></td>
+                </tr>
+              <?php
               }
               ?>
 
+
+            </tbody>
+          </table>
+        </div>
 
         <td><a href="../controlador/clienteRegistro.php" class="btn btn-primary">Nuevo Cliente</a></td>
         <td><a target="_blank" href="../controlador/reporteClientes.php" class="btn btn-primary">Reporte</a></td>
