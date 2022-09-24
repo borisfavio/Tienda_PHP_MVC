@@ -137,8 +137,8 @@
     </div>
 
 
-    <div style="display = none;" id="test3" class="col s12">Test 3</div>
-    <div style="display = none;" id="test4" class="col s12">Test 4</div>
+    <div style="display: none;" id="test3" class="col s12">Test 3</div>
+    <div style="display: none;" id="test4" class="col s12">Test 4</div>
 
 </div>
 
