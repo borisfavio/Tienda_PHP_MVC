@@ -22,7 +22,7 @@ class Usuario
     public function verificar(){
         include('conexion.php');
         $db = new Conexion();
-        $sql = $db->query("SELECT * FROM usuarios WHERE usuario LIKE '$this->usuario' AND password = '$this->password';");
+        $sql = $db->query("SELECT * FROM usuarios WHERE user LIKE '$this->usuario' AND password = '$this->password';");
         return($sql);
     }
 
@@ -40,22 +40,6 @@ class Usuario
     public function getId(){
         return $this->id;
     }
-
-    public function setNit($ni){
-        $this->nit=$ni;
-    }
-    public function getNit(){
-        return $this->nit;
-    }
-
-
-    public function setRazon($ra){
-        $this->razon=$ra;
-    }
-    public function getRazon(){
-        return $this->razon;
-    }
-
 
     public function setEstado($es){
         $this->estado=$es;

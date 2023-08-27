@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/materialize.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
 
@@ -40,40 +40,43 @@
                                     }
                                 ?>
                             </div>
+                            <!--- Formulario de inicio de sesion--->
                             <form class="user"  method="post">
-                                <div class="input-field">
-                                    <input type="text" class="" id="usuario"
-                                        name="usuario">
-                                        <label for="usuario"Usuario></label>
-                                </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user"
+                                <label for="usuario">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="usuario"
+                                        name="usuario" placeholder="Telefono/Email">
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="form-control" id="password"
                                         name="password" placeholder="Password">
                                 </div>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox small">
                                         <input type="checkbox" class="custom-control-input" id="customCheck">
-                                        <label class="custom-control-label" for="customCheck">Remember
-                                            Me</label>
+                                        <label class="custom-control-label" for="customCheck">Recordarme</label>
                                     </div>
                                 </div>
-                                <input name="ingresar" type="submit" class="btn btn-primary btn-user btn-block">
+                                <br>
+                                <button name="ingresar" type="submit" class="btn btn-primary btn-l-block">
                                     Login
-                                </input>
+                                </button>
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Login with Google
+                                    <i class="fab fa-google fa-fw"></i> Ingresar con Google
                                 </a>
                                 <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                    <i class="fab fa-facebook-f fa-fw"></i> Ingresar con Facebook
                                 </a>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                <a class="small" href="forgot-password.html">Olvide mi contraaseña?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="register.html">Create an Account!</a>
+                                <a class="small" href="register.html">Crear una cuenta!</a>
                             </div>
                         </div>
                     </div>
